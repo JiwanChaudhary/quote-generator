@@ -61,14 +61,23 @@ body {
   border-radius: 10px;
   color: #fff;
   border: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
   box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
 }
 
 .twitter-button:hover {
+  color: #38a1f3;
   cursor: pointer;
+}
+
+.twitter-button:active {
+  transform: translate(0, 7px);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 #next-quote {
@@ -80,10 +89,18 @@ body {
   box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
 }
 
 #next-quote:hover {
   cursor: pointer;
+}
+
+#next-quote:active {
+  transform: translate(0, 7px);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 1000px) {
