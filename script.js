@@ -4,9 +4,23 @@ let quoteText = document.getElementById("quote");
 let quoteAuthor = document.getElementById("author");
 let nextQuote = document.getElementById("next-quote");
 let twitterButton = document.getElementById("twitter");
+let loader = document.getElementById('loader');
+
+// show loader
+function loading() {
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+
+//hide loader
+function complete() {
+    loader.hidden = true;
+    quoteContainer.hidden = false;
+}
 
 // Show new quote
 function randomQuote() {
+    loading();
     // Get a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
@@ -23,11 +37,15 @@ function randomQuote() {
     } else {
         quoteText.classList.remove('large-quote-text');
     }
+
+    //show quote, hide loader
     quoteText.textContent = quote.text;
+    complete();
 }
 
 //Get Quotes from API
 async function getQuotes() {
+    loading();
     const apiURL = "https://type.fit/api/quotes";
     try {
         const response = await fetch(apiURL);
@@ -51,4 +69,5 @@ twitterButton.addEventListener('click', tweetQuote);
 
 //onLoad
 getQuotes();
+
 
